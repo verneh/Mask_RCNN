@@ -150,16 +150,16 @@ def display_instances(image, boxes, masks, class_ids, class_names,
         mask = masks[:, :, i]
         if show_mask:
             # masked_image = apply_mask(masked_image, mask, color)
-            if class_id == 1: # white, catheter
-                masked_image = apply_mask(masked_image,mask, [1.0,1.0, 1.0],alpha=0.7)
+            if class_id == 1: # yellow, catheter
+                masked_image = apply_mask(masked_image,mask, [0.9, 0.9, 0.0],alpha=0.7)
             if class_id == 2: # light blue, guidewire
                 masked_image = apply_mask(masked_image,mask, [0.6, 0.9, 1.0],alpha=0.7)
             if class_id == 3: #  red, balloon
                 masked_image = apply_mask(masked_image,mask, [1.0, 0.0, 0.0],alpha=0.7)
             if class_id == 4: #  white valve
                 masked_image = apply_mask(masked_image,mask, [0.9, 0.9, 0.9],alpha=0.7)
-            if class_id == 5: # spine yellow
-                masked_image = apply_mask(masked_image,mask, [0.9, 1.0, 0.1],alpha=0.7)
+            if class_id == 5: # spine orange
+                masked_image = apply_mask(masked_image,mask, [0.9, 0.5, 0.1],alpha=0.7)
             if class_id == 6: # vertebra green (light)
                 masked_image = apply_mask(masked_image,mask, [0.7, 1.0, 0.1],alpha=0.7)
             if class_id == 7: # intervertebra lime green
