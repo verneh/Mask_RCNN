@@ -264,7 +264,7 @@ def draw_rois(image, rois, refined_rois, mask, class_ids, class_names, limit=10)
             # Label
             label = class_names[class_id]
             ax.text(rx1, ry1 + 8, "{}".format(label),
-                    color='w', size=11, backgroundcolor="none")
+                    color='b', size=11, backgroundcolor="none")
 
             # Mask
             m = utils.unmold_mask(mask[id], rois[id]
