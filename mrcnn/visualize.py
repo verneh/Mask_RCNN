@@ -144,7 +144,7 @@ def display_instances(image, boxes, masks, class_ids, class_names,
         else:
             caption = captions[i]
         ax.text(x1, y1 + 8, caption,
-                color='w', size=11, backgroundcolor="none")
+                color='b', size=11, backgroundcolor="none")
 
         # Mask
         mask = masks[:, :, i]
@@ -159,7 +159,7 @@ def display_instances(image, boxes, masks, class_ids, class_names,
             if class_id == 4: #  white valve
                 masked_image = apply_mask(masked_image,mask, [0.9, 0.9, 0.9],alpha=0.7)
             if class_id == 5: # spine orange
-                masked_image = apply_mask(masked_image,mask, [0.9, 0.5, 0.1],alpha=0.7)
+                masked_image = apply_mask(masked_image,mask, [0.9, 0.5, 0.1],alpha=1.0)
             if class_id == 6: # vertebra green (light)
                 masked_image = apply_mask(masked_image,mask, [0.7, 1.0, 0.1],alpha=0.7)
             if class_id == 7: # intervertebra lime green
