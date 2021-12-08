@@ -152,19 +152,19 @@ def display_instances(image, boxes, masks, class_ids, class_names,
         if show_mask:
             # masked_image = apply_mask(masked_image, mask, color)
             if class_id == 1: # yellow, catheter
-                masked_image = apply_mask(masked_image,mask, [0.9, 0.9, 0.0],alpha=0.7)
+                masked_image = apply_mask(masked_image,mask, [0.9, 0.9, 0.0],alpha=0.5)
             if class_id == 2: # light blue, guidewire
-                masked_image = apply_mask(masked_image,mask, [0.6, 0.9, 1.0],alpha=0.7)
+                masked_image = apply_mask(masked_image,mask, [0.6, 0.9, 1.0],alpha=0.5)
             if class_id == 3: #  red, balloon
-                masked_image = apply_mask(masked_image,mask, [1.0, 0.0, 0.0],alpha=0.7)
+                masked_image = apply_mask(masked_image,mask, [1.0, 0.0, 0.0],alpha=0.5)
             if class_id == 4: #  white valve
-                masked_image = apply_mask(masked_image,mask, [0.9, 0.9, 0.9],alpha=0.7)
+                masked_image = apply_mask(masked_image,mask, [0.9, 0.9, 0.9],alpha=0.5)
             if class_id == 5: # spine orange
                 masked_image = apply_mask(masked_image,mask, [0.9, 0.5, 0.1],alpha=1.0)
             if class_id == 6: # vertebra green (light)
-                masked_image = apply_mask(masked_image,mask, [0.7, 1.0, 0.1],alpha=0.3)
+                masked_image = apply_mask(masked_image,mask, [0.7, 1.0, 0.1],alpha=0.5)
             if class_id == 7: # intervertebra lime green
-                masked_image = apply_mask(masked_image,mask, [0.5, 0.5, 0.0],alpha=0.3)
+                masked_image = apply_mask(masked_image,mask, [0.5, 0.5, 0.0],alpha=0.5)
 
         # Mask Polygon
         # Pad to ensure proper polygons for masks that touch image edges.
