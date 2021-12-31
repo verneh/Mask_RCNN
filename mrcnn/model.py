@@ -2877,7 +2877,7 @@ class MeanAveragePrecisionCallback(Callback):
     """We add a custom callback that computes the average precision in certain X epochs.
     """
     def __init__(self, train_model: MaskRCNN, inference_model: MaskRCNN, dataset: utils.Dataset,
-                 calculate_map_at_every_X_epoch=5, dataset_limit=None,
+                 calculate_map_at_every_X_epoch=1, dataset_limit=None,
                  verbose=1):
         super().__init__()
         self.train_model = train_model
